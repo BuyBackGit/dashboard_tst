@@ -61,6 +61,33 @@
         const base_url = "index.html";
         const current_url = "BBT_BR1.html";
     </script>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .desktop {
+
+        padding: 20px;
+        float: left;
+        width: 420;
+        /* The width is 420, by default */
+
+    }
+
+    @media screen and (max-width: 800px) {
+
+        .desktop {
+            width: 100%;
+           
+            padding: 0px;
+           
+
+            /* The width is 100%, when the viewport is 800px or smaller */
+        }
+    }
+</style>
 </head>
 
 <body>
@@ -75,13 +102,13 @@
        
         
         
-        <div class="row-flex justify-content-between justify-content-center align">
+        <div class="d-flex justify-content-between justify-content-center align">
 
            
             
             <div class="row-flex justify-content-between justify-content-center align"
-                style="width:100%;height:0px;padding-bottom:56.250%;"><iframe src="https://streamable.com/e/9hpvka"
-                    frameborder="0" width="100%" height="100%" allowfullscreen
+                style="width:100%;height:0px;padding-bottom:56.250%;"><iframe class="desktop" src="https://streamable.com/e/9hpvka"
+                    frameborder="0"  allowfullscreen
                     style="width:90%;height:90%;position:absolute;top:0px;overflow:hidden;"></iframe></div>
         </div>
 
@@ -130,7 +157,7 @@
 
                     <div>
                         <a>
-                            <iframe
+                            <iframe class="desktop"
                                 src="https://poocoin.app/embed-swap?outputCurrency=0xB3670F91E86a96EeDA0c75b1573035A6277226fb"
                                 width="420" height="630"></iframe></a>
 
