@@ -4,7 +4,7 @@ console.log('hello world');
 Moralis.initialize("OqhZPshkcGYtVulxkxcB7aomqgDqnEjlAbbkJZaN");
 Moralis.serverURL = "https://pe6tgnkrykjf.usemoralis.com:2053/server";
 
-let homepage = "https://testingbbt.netlify.app/"
+let homepage = "https://app.buybacktoken.net/"
 
 //HELPER FUNCTIONS
 login = async () => {

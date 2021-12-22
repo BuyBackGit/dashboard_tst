@@ -5,7 +5,7 @@ appId =  "OqhZPshkcGYtVulxkxcB7aomqgDqnEjlAbbkJZaN";
 Moralis.start({ serverUrl, appId});
 let user;
 
-let homepage = "https://testingbbt.netlify.app/"
+let homepage = "https://app.buybacktoken.net/"
 
 async function login(){
    
