@@ -477,24 +477,21 @@
                                     <div id="section2">
                                         <div style=color:azure; class="container " id="transferETH">
 
-                                            <p>
-                                                SELECT TOKEN/S TO BUY
-                                            </p>
+                                            <p id="logo-container justify-content-center">
+                                                <div id="myImg" class="img-wrap"> </div>
 
-
-
-
+                                                <br>                                     
 
                                             <div id="TransferETHSection" class="container">
 
-                                                <div class="form-group col-md-12 ">
+                                                <div class="form-group col-md-12 row d-flex justify-content-center ">
 
                                                     <div>
                                                         <select class="align-items-center " onchange="val()"
                                                             id="select_id">
                                                             <option value="select">-Select-</option>
                                                             <option value="0xfe28c3399a109993be1ca78c4f32b793c40aa674"
-                                                                data-othervalue="BBT TOKEN " data-someothervalue=>
+                                                                data-othervalue="BBT EASYSWAP " data-someothervalue=>
                                                                 <H1>BUYBACK TOKEN</H1>
                                                             </option>
                                                             <option value="0xa173b5b2a31949b2bea0a46d8ebdb7b7b0723aa8"
@@ -511,33 +508,28 @@
                                                     </div>
 
 
-
-
-
-                                                    <br>
+                                                   
 
                                                     <p class="row d-flex justify-content-center">
                                                         <span id="addressToReceive"> </span>
-                                                    <h4 style=color:rgb(176,11,241)> EASY SWAP ADDRESS </h4>
+                                                    
                                                     </p>
 
 
 
-                                                    <h4><span style=color:rgb(172,172,221); id="es"> Token not
-                                                            Selected</span></h4>
+                                                    
+                                                 
+
+
+
+
+
+
                                                     <br>
-
-
-
-
-
-
-                                                    <br><br>
-                                                    <small class="form-text ">Please verify if you are on BSC
-                                                        chain</small>
+                                                   
                                                 </div>
 
-                                                <div class="form-group col-md-14 ">
+                                                <div class="form-group col-md-14 row d-flex justify-content-center ">
                                                     <input class="col-sm-14 col-md-14 text-center" type="number"
                                                         step="0.01" class="form-control" id="amountOfETH"
                                                         placeholder="BNB VALUE">
@@ -584,8 +576,7 @@
 
                                             <br>
 
-                                            <p id="logo-container justify-content-center">
-                                            <div id="myImg" class="img-wrap"> </div>
+                                           
 
                                         </div>
                                         <br>
@@ -599,6 +590,10 @@
                                         <span style=color:rgb(172,172,221); id="ticker"> </span>
 
                                         <span style=color:rgb(172,172,221); id="address"> </span>
+
+                                        <br><br>
+                                    </div><h15><span  style=color:rgb(172,172,221); id="es"> Token not
+                                        Selected</span></h15>
 
 
 
@@ -615,9 +610,9 @@
                                         <button id="btn-logout" class="w-100 btn btn-lg btn-primary"
                                             style="border-radius: 25px;" type="submit">Logout</button><br><br>
 
-                                        <p class="align-items-center">
-                                            Your Wallet address -<span id="wallet-address"> </span>
-                                        </p>
+                                        <div class="align-items-center">
+                                            Connected address - <span id="wallet-address"> </span>
+                                        </div>
 
 
 
