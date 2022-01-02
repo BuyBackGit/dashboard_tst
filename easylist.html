@@ -68,6 +68,121 @@
     <script src="cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #myImg {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #myImg:hover {
+            opacity: 0.7;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+
+        /* Add Animation */
+        .modal-content,
+        #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+    </style>
+
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
@@ -344,7 +459,8 @@
 
 
             <div class="row justify-content-center">
-                <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch justify-content-center">
+                <div
+                    class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch justify-content-center">
                     <div class="card " style="border: 2px solid #70dbfc;">
                         <div class="card-body">
 
@@ -365,7 +481,7 @@
                                                 SELECT TOKEN/S TO BUY
                                             </p>
 
-                                            
+
 
 
 
@@ -378,8 +494,7 @@
                                                             id="select_id">
                                                             <option value="select">-Select-</option>
                                                             <option value="0xfe28c3399a109993be1ca78c4f32b793c40aa674"
-                                                                data-othervalue="BBT TOKEN "
-                                                                data-someothervalue=>
+                                                                data-othervalue="BBT TOKEN " data-someothervalue=>
                                                                 <H1>BUYBACK TOKEN</H1>
                                                             </option>
                                                             <option value="0xa173b5b2a31949b2bea0a46d8ebdb7b7b0723aa8"
@@ -453,7 +568,7 @@
 
                                                 </div>
 
-                                                
+
 
                                                 <div class="btn btn-primary col-md-5 text-center justify-content-center"
                                                     style="border-radius: 25px;" style="font-size:1vw"
@@ -463,14 +578,14 @@
 
 
                                             </div>
-                                            
+
 
 
 
                                             <br>
 
                                             <p id="logo-container justify-content-center">
-                                                <div class="img-wrap"> </div>
+                                            <div id="myImg" class="img-wrap"> </div>
 
                                         </div>
                                         <br>
@@ -515,7 +630,9 @@
                         </div>
                     </div>
                 </div>
-               
+
+
+
             </div>
 
             <script async src="platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -525,6 +642,40 @@
                 gtag('js', new Date());
                 gtag('config', 'UA-65076627-9');
             </script>
+
+
+
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <div id="myImg" class="img-wrap modal-content"></div>
+                <div id="caption"></div>
+            </div>
+
+            <script>
+                // Get the modal
+                var modal = document.getElementById("myModal");
+
+                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                var img = document.getElementById("myImg");
+
+                var captionText = document.getElementById("caption");
+                img.onclick = function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                    captionText.innerHTML = this.alt;
+                }
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+            </script>
+
 
 
 
