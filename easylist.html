@@ -5,20 +5,20 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BuyBack Token | All in One Dashboard | Yield Farming Tutorials</title>
+    <title>BuyBack Token | All in One Dashboard | Easy Swap</title>
 
-    <meta name="title" content="BuyBack Token | All in One Dashboard | Yield Farming Tutorials" />
-    <meta name="description" content="BuyBack Token | All in One Dashboard | Yield Farming Tutorials" />
+    <meta name="title" content="BuyBack Token | All in One Dashboard | Easy Swap" />
+    <meta name="description" content="BuyBack Token | All in One Dashboard | Easy Swap" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="index.html" />
-    <meta property="og:title" content="BuyBack Token | All in One Dashboard | Yield Farming Tutorials" />
-    <meta property="og:description" content="BuyBack Token | All in One Dashboard | Yield Farming Tutorials" />
+    <meta property="og:title" content="BuyBack Token | All in One Dashboard | Easy Swap" />
+    <meta property="og:description" content="BuyBack Token | All in One Dashboard | Easy Swap" />
     <meta property="og:image" content="/buybacktoken.net/images/og-image.html" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="index.html" />
-    <meta property="twitter:title" content="BuyBack Token | All in One Dashboard | Yield Farming Tutorials" />
-    <meta property="twitter:description" content="BuyBack Token | All in One Dashboard | Yield Farming Tutorials" />
+    <meta property="twitter:title" content="BuyBack Token | All in One Dashboard | Easy Swap" />
+    <meta property="twitter:description" content="BuyBack Token | All in One Dashboard | Easy Swap" />
     <meta property="twitter:image" content="/buybacktoken.net/images/og-image.html" />
     <link rel=“canonical” />
     <link rel="manifest" href="/buybacktoken.net/assets/images/favicon/manifest.json">
@@ -68,12 +68,15 @@
     <script src="cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 
+
+
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
 </head>
 
 <body>
     <div class="wrapper">
-        <div class="sidebar ">
-            
+        <div class="sidebar">
             <div class="sidebar-logo d-flex align-items-center justify-content-between">
                 <a href="index.html" class="header-logo">
                     <img src="/buybacktoken.net/assets/images/logo.svg" class="img-fluid light-logo" alt="logo" />
@@ -200,7 +203,6 @@
                             </li>
 
 
-
                             <li class="">
                                 <a href="tutorials.html" title=""><i style="color:rgb(234, 6, 255)"
                                         class="flaticon-024-video icon"></i><span
@@ -311,7 +313,7 @@
             <nav class="navbar navbar-expand-lg top-navbar mlr-20 br-0">
                 <div class="container-fluid">
                     <div class="d-inline-block d-xl-none ml-2">
-                        <a href="../index.html" class="header-logo">
+                        <a href="index.html" class="header-logo">
                             <img src="/buybacktoken.net/assets/images/logo.svg" alt="" class="logo" />
                         </a>
                     </div>
@@ -319,7 +321,7 @@
                         <i class="ti-align-justify"></i>
                     </button>
                     <div class="ticker-list d-none d-xl-block">
-                        <h6 class="mb-0">BuyBack Token | All in One Dashboard | Yield Farming Tutorials</h6>
+                        <h6 class="mb-0">BuyBack Token | All in One Dashboard | Easy Swap</h6>
                     </div>
                 </div>
             </nav>
@@ -329,14 +331,11 @@
                 <div class="col-sm-12 col-md-12 text-center">
                     <div class="card-body">
 
-
-                        <p class="row d-flex justify-content-between justify-content-center align">
-                        <h2>YIELD FARMING TUTORIALS</h2></span>
-                        </p>
-
-
-
-
+                        <button class="btn btn-primary btn-lg btn-block mb-3" style="border-radius: 25px;">
+                            <p class="row d-flex justify-content-center">
+                            <h2>EASY SWAP</h2></span>
+                            </p>
+                        </button>
 
 
                     </div>
@@ -344,99 +343,251 @@
             </div>
 
 
+            <div class="row justify-content-center">
+                <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch justify-content-center">
+                    <div class="card " style="border: 2px solid #70dbfc;">
+                        <div class="card-body">
 
-
-            <section>
-
-                <div class="content">
-
-
-
-
-                    <div class="d-flex justify-content-between justify-content-center align">
-
-
-
-                        <div class="row-flex justify-content-between justify-content-center align"
-                            style="width:100%;height:0px;padding-bottom:56.250%;"><iframe class="desktop"
-                                src="https://www.youtube.com/embed/0HP5wF6PchM" frameborder="0" allowfullscreen
-                                style="width:90%;height:90%;position:absolute;top:0px;overflow:hidden;"></iframe></div>
-                    </div>
-
-
-                </div>
-
-
-
-                <br> <br>
-
-                <div class="col-sm-12 col-md-12 text-center">
-                    <div class="card-body">
-                        <div class="flex justify-content-center">
-                            <div>
-
-
-
-                                <h1 style="color:rgb(9, 255, 1)"> <u>!! VISIT NOW !! </u>
-                                </h1>
-                                <br>
-                                <br>
-
-                                <br>
-                                <a href="https://app.xhash.farm/" class="btn btn-primary btn-lg btn-block mb-3"
-                                    target="_blank" rel="noopener noreferrer " style="border-radius: 25px;">
-                                    XHASH FARMS </a>
-                                </button>
-                                <br>
-                                <br>
-
-
-
-                                <br>
+                            <div class="col-sm-12 col-md-12 text-center ">
+                                <div class="card-body">
+                                    <br>
+                                    <button id="btn-login" class="w-100 btn btn-lg btn-primary"
+                                        style="border-radius: 25px;" type="submit">Login with Metamask</button>
+                                    <br>
 
 
 
 
-                                <BR>
-                                <BR>
-                                <BR>
-                                <BR>
-                                <BR>
+                                    <div id="section2">
+                                        <div style=color:azure; class="container " id="transferETH">
+
+                                            <p>
+                                                SELECT TOKEN/S TO BUY
+                                            </p>
+
+                                            
 
 
 
+                                            <div id="TransferETHSection" class="container">
+
+                                                <div class="form-group col-md-12">
+
+                                                    <div>
+                                                        <select class="align-items-center " onchange="val()"
+                                                            id="select_id">
+                                                            <option value="select">-Select-</option>
+                                                            <option value="0xfe28c3399a109993be1ca78c4f32b793c40aa674"
+                                                                data-othervalue="BBT TOKEN "
+                                                                data-someothervalue=>
+                                                                <H1>BUYBACK TOKEN</H1>
+                                                            </option>
+                                                            <option value="0xa173b5b2a31949b2bea0a46d8ebdb7b7b0723aa8"
+                                                                data-othervalue="XHASH+BBT "
+                                                                data-someothervalue="DOUBLE BUY (99/1)">
+                                                                XHASH TOKEN </option>
+                                                            <option value="0x3ed151e9b87ac375e5bd33db0c97ecc16ef15f79"
+                                                                data-othervalue="BBT+XMINE "
+                                                                data-someothervalue="DOUBLE BUY (50/50)">
+                                                                BUYBACK + XMINE (50/50)</option>
+
+                                                        </select>
+
+                                                    </div>
+
+
+
+
+
+                                                    <br>
+
+                                                    <p class="row d-flex justify-content-center">
+                                                        <span id="addressToReceive"> </span>
+                                                    <h4 style=color:rgb(176,11,241)> EASY SWAP ADDRESS </h4>
+                                                    </p>
+
+
+
+                                                    <h4><span style=color:rgb(172,172,221); id="es"> Token not
+                                                            Selected</span></h4>
+                                                    <br>
+
+
+
+
+
+
+                                                    <br><br>
+                                                    <small class="form-text ">Please verify if you are on BSC
+                                                        chain</small>
+                                                </div>
+
+                                                <div class="form-group col-md-14">
+                                                    <input class="col-sm-14 col-md-14 text-center" type="number"
+                                                        step="0.01" class="form-control" id="amountOfETH"
+                                                        placeholder="BNB VALUE">
+                                                </div>
+
+
+
+
+
+
+                                                <button id="ETHTransferButton" type="submit"
+                                                    class="btn btn-primary col-md-6" style="border-radius: 25px;">BUY
+                                                </button>
+                                            </div>
+                                            <br>
+                                            <br>
+
+
+                                            <div id="balancesSection">
+
+
+
+                                                <div class="the-buttons">
+
+                                                    <button class="btn btn-primary col-md-5"
+                                                        id="btn-get-native-balances" style="border-radius: 25px;">Check
+                                                        Balance</button>
+
+                                                </div>
+
+                                                
+
+                                                <div class="btn btn-primary col-md-5 text-center justify-content-center"
+                                                    style="border-radius: 25px;" style="font-size:1vw"
+                                                    style="color:white" id="userBalances"
+                                                    class="table-responsive colapsed">
+                                                </div>
+
+
+                                            </div>
+                                            
+
+
+
+                                            <br>
+
+                                            <p id="logo-container justify-content-center">
+                                                <div class="img-wrap"> </div>
+
+                                        </div>
+                                        <br>
+                                        <br>
+
+
+                                        <br>
+
+
+
+                                        <span style=color:rgb(172,172,221); id="ticker"> </span>
+
+                                        <span style=color:rgb(172,172,221); id="address"> </span>
+
+
+
+                                        <br>
+
+
+
+
+
+                                        <br> <br>
+                                        <button id="btn-refresh" class="w-100 btn btn-lg btn-primary"
+                                            style="border-radius: 25px;" type="submit">Refresh Page</button><br><br>
+
+                                        <button id="btn-logout" class="w-100 btn btn-lg btn-primary"
+                                            style="border-radius: 25px;" type="submit">Logout</button><br><br>
+
+                                        <p class="row d-flex justify-content-center">
+                                            Your Wallet address -<span id="wallet-address"> </span>
+                                        </p>
+
+
+
+
+
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+               
+            </div>
 
-            </section>
+            <script async src="platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() { dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'UA-65076627-9');
+            </script>
 
 
 
+            <script>
+                function val() {
+                    document.getElementById("addressToReceive").value = document.getElementById("select_id").value
+
+                }
+            </script>
 
 
+            <script>
+                $('#select_id').change(function () {
+                    var Value = $(this).find('option:selected').attr('value');
+                    var otherValue = $(this).find('option:selected').attr('data-othervalue');
+                    var someOtherValue = $(this).find('option:selected').attr('data-someothervalue');
+                    $('#otherValue').val(otherValue);
+                    $('#someOtherValue').val(someOtherValue);
+
+                    document.getElementById('es').textContent = (Value);
+                    document.getElementById('ticker').textContent = (otherValue);
+                    document.getElementById('address').textContent = (someOtherValue);
+
+                });
+            </script>
+            <script>
+                function getImageSrc() {
+                    // specify the path to the folder containing the imgs in this variable
+                    var imgFolder = "easyswap/";
+
+                    // loop through each select element
+                    $("select").each(function () {
+                        // fire function to get src
+                        getSrc();
+
+                        // fire function to get src on change
+                        $(this).change(function () {
+                            getSrc();
+                        })
+                    });
+
+                    function getSrc() {
+                        var src; // variable to hold the src
+
+                        src = imgFolder + $("#select_id").val() + ".png";
+                        $("#imgElem").attr("src", src);
+                        // append src to a p element just for debugging sake(i.e to see the change in the src)
 
 
+                        // create a an img element with the src each time and append to the image wrap div
+                        $(".img-wrap").html(`<img width="100%" height="100%" src="${src}">`);
+                    }
+                }
 
+                // fire function on page-load
+                $(document).ready(function () {
+                    getImageSrc();
+                })
 
+            </script>
 
 
         </div>
-
-        <script async src="platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'UA-65076627-9');
-        </script>
-
-
-
-
-
-    </div>
     </div>
 
     <script src="cdn.jsdelivr.net/npm/popper.js%401.16.1/dist/umd/popper.min.js"></script>
@@ -449,7 +600,7 @@
     <script src="/buybacktoken.net/assets/js/app4bf4.js?ver=1.0.3"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65076627-9"></script>
 
-
+    <script src="send.js"></script>
 
 
 </body>
