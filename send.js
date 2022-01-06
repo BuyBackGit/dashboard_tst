@@ -285,7 +285,7 @@ getCreateButton = async () => {
     let addresstocreate = String(document.querySelector('#addressToCreate').value);      
     alert('You will Create a Easy Swap for - ' + addresstocreate);
     window.web3 = await Moralis.enableWeb3();
-    let contractInstance = new web3.eth.Contract(abicreateaddress, "0x7B16fC82041B5e9DF96149baFddd7ac579f1E788")
+    let contractInstance = new web3.eth.Contract(abicreateaddress, "0x6Ba7005914256E3f3F767637bDc80Eae69EB832C")
     console.log(addresstocreate);
    
     const receipt = await contractInstance.methods.createSwap(addresstocreate).send({from: ethereum.selectedAddress});
