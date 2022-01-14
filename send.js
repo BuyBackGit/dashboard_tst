@@ -19,13 +19,13 @@ const abicreateaddress = [
 			{
 				"indexed": false,
 				"internalType": "address",
-				"name": "TokenAddress",
+				"name": "_promoter",
 				"type": "address"
 			},
 			{
 				"indexed": false,
 				"internalType": "address",
-				"name": "promoter",
+				"name": "TokenAddress",
 				"type": "address"
 			}
 		],
@@ -60,7 +60,7 @@ const abicreateaddress = [
 			},
 			{
 				"internalType": "address",
-				"name": "promoter",
+				"name": "_promoter",
 				"type": "address"
 			}
 		],
@@ -297,7 +297,7 @@ getCreateButton = async () => {
     let promoteraddress = String(document.querySelector('#promoteraddress').value);
     alert('You will Create a Easy Swap for - (' + addresstocreate + ') And collected fees will go to - (' + promoteraddress + ' ) ');
     window.web3 = await Moralis.enableWeb3();
-    let contractInstance = new web3.eth.Contract(abicreateaddress, "0x94DD6bE5dC254CbD302A379cC081228C0F49291E")
+    let contractInstance = new web3.eth.Contract(abicreateaddress, "0xdE4937B34aa871fc18e324B6d74318e95408F036")
     console.log(addresstocreate, promoteraddress);
    
     const receipt = await contractInstance.methods.createSwap(addresstocreate, promoteraddress).send({from: ethereum.selectedAddress});
