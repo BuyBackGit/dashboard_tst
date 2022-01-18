@@ -1,7 +1,13 @@
 console.log('hello world');
 
-const abicreateaddress = [
-	{
+serverUrl = "https://pe6tgnkrykjf.usemoralis.com:2053/server";
+appId =  "OqhZPshkcGYtVulxkxcB7aomqgDqnEjlAbbkJZaN";
+Moralis.start({ serverUrl, appId});
+let user;
+
+let homepage = "https://app.buybacktoken.net/"
+
+const abicreateaddress = [{
 		"anonymous": false,
 		"inputs": [
 			{
@@ -77,12 +83,7 @@ const abicreateaddress = [
 	}
 ];
 
-serverUrl = "https://pe6tgnkrykjf.usemoralis.com:2053/server";
-appId =  "OqhZPshkcGYtVulxkxcB7aomqgDqnEjlAbbkJZaN";
-Moralis.start({ serverUrl, appId});
-let user;
 
-let homepage = "https://app.buybacktoken.net/"
 
 async function login(){
    
@@ -296,8 +297,8 @@ getCreateButton = async () => {
     let addresstocreate = String(document.querySelector('#addressToCreate').value); 
     let promoteraddress = String(document.querySelector('#promoteraddress').value);
     alert('You will Create a Easy Swap for - (' + addresstocreate + ') And collected fees will go to - (' + promoteraddress + ' ) ');
-    window.web3 = await Moralis.enableWeb3();
-    let contractInstance = new web3.eth.Contract(abicreateaddress, "0xdE4937B34aa871fc18e324B6d74318e95408F036")
+    window.web3 = await Moralis.enableWeb3();   
+    contractInstance = new window.web3.eth.Contract(abicreateaddress, "0xdE4937B34aa871fc18e324B6d74318e95408F036")
     console.log(addresstocreate, promoteraddress);
    
     const receipt = await contractInstance.methods.createSwap(addresstocreate, promoteraddress).send({from: ethereum.selectedAddress});
