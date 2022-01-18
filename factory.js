@@ -1,7 +1,6 @@
 console.log('Hello World');
 
 
-//ABI2 = BBT SMARTCONTRACT
 
 const abicreateaddress = [{
     "anonymous": false,
@@ -107,13 +106,9 @@ getCreateButton = async () => {
     let promoteraddress = String(document.querySelector('#promoteraddress').value);
 
     const ADDRESS = "0xdE4937B34aa871fc18e324B6d74318e95408F036"; // SMARTCONTRACT
-
-    alert('You will Create a Easy Swap for - (' + addresstocreate + ') And collected fees will go to - (' + promoteraddress + ' ) ');
-   
-    contractInstance = new web3.eth.Contract(abicreateaddress, ADDRESS)
-    
-    console.log(addresstocreate, promoteraddress);
-   
+    alert('You will Create a Easy Swap for - (' + addresstocreate + ') And collected fees will go to - (' + promoteraddress + ' ) ');   
+    contractInstance = new web3.eth.Contract(abicreateaddress, ADDRESS)    
+    console.log(addresstocreate, promoteraddress);   
     const receipt = await contractInstance.methods.createSwap(addresstocreate, promoteraddress).send({from: ethereum.selectedAddress});
     console.log('processing');              
 
@@ -135,13 +130,6 @@ getCreateButton = async () => {
     document.getElementById('neweasy-address').textContent = (contract_address);
 
 }
-
-
-
-
-
-
-
 
 
 
