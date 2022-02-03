@@ -360,6 +360,9 @@ if(document.querySelector('#btn-refresh') != null){
 if(document.querySelector('#CreateButton') != null){
     document.querySelector('#CreateButton').onclick = getCreateButton;    
 }
+if(document.querySelector('#ClaimButton') != null){
+    document.querySelector('#ClaimButton').onclick = getClaimButton;    
+}
 
 
 login();
