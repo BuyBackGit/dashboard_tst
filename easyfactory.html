@@ -8,7 +8,8 @@
     <title>BuyBack Token | All in One Dashboard | Staking</title>
 
     <meta name="title" content="BuyBack Token | All in One Dashboard | EasyFactory" />
-    <meta name="description" content="Create your Own Smart Contract to Promote your preferred Token in Binance Smart Chain, Earn BNB Comissions automaticlly! Beta Version, Powered By BuyBack Token" />
+    <meta name="description"
+        content="Create your Own Smart Contract to Promote your preferred Token in Binance Smart Chain, Earn BNB Comissions automatically! Beta Version, Powered By BuyBack Token" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="index.html" />
@@ -67,8 +68,11 @@
     <link rel="stylesheet" type="text/css" href="/buybacktoken.net/assets/css/style4bf4.css?ver=1.0.3" />
     <script src="cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <link rel="stylesheet" type="text/css" href="/Easyfactory/css/easyfactory.css" />
+    
+
     <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
-    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    
 
     <script>
         const base_url = "index.html";
@@ -141,7 +145,7 @@
                                     </span></a>
                             </li>
 
-              <!---              <li class="">
+                            <!---              <li class="">
                                 <a href="staking.html" title=""><i style="color:rgb(234, 6, 255)"
                                         class="flaticon-089-piggy-bank icon"></i><span
                                         style="color:rgb(9, 236, 122)">NFT Staking</span></a>
@@ -169,7 +173,7 @@
                     </li>
 
 
-                 <!--   <li class="">
+                    <!--   <li class="">
                         <a href="lottery.html" title=""><i class="flaticon-003-diamond icon"></i><span>BBT
                                 Lottery</span></a>
                     </li>--->
@@ -328,143 +332,310 @@
                 </div>
             </nav>
 
-            <br><br>
-            <section>
+            <br>
+            <section >
 
                 <div class="row justify-content-center">
-                    <div
-                        class="col-xl-4 col-lg-6 col-md-12 col-sm-12 col-12 d-flex align-items-stretch justify-content-center">
-                        <div class="card " style="border: 2px solid #70dbfc;">
-                            <div class="card-body">
-
-                                <div class="col-sm-12 col-md-12 text-center">
-                                    <div class="card-body">
-
-                                        <div>
-                                            <div class="container ">
-
-
-                                                <p style="border: 5px solid #13aa05;">
-                                                    Easy Swap Factory
-                                                </p>
-                                            </div>
-                                            <div style="font-size: 13px;">Create your Easy Address to promote your
-                                                prefered Token on BSC. Earn BNB from the fees generated.</div>
-                                            <br>
-                                        </div>
-
-                                        <input class="col-sm-12 col-md-12 text-center" type="text" class="form-control"
-                                            id="promoteraddress" placeholder="Promoter address?">
-                                    </div>
-                                    <div style="font-size: 13px;">Promoter Address earn the fees</div>
-                                    <br>
-
-
-                                    <br>
-
-                                    <div id="CreateEasySwap" class="container">
-
-
-                                        <div class="form-group col-md-12">
-
-                                            <input class="col-sm-12 col-md-12 text-center" type="text"
-                                                class="form-control" id="addressToCreate"
-                                                placeholder="Token to Promote?">                                     
-                                        </div>
-
-                                        <div style="font-size: 13px;">Insert the token to promote</div>
-                                        <br><br>
-
-                                        <button id="CreateButton" type="submit" class="btn btn-primary col-md-6"
-                                            style="border: 2px solid #13aa05;">CREATE</button>
-                                    </div>
-                                    <br>
-
-
-                                </div>
-
-                                <br>
-
-                                <div class=" container ">
-                                    <p class="text-center">
-                                        <span id="neweasy-address" style="font-size: 25px; color:rgb(224, 8, 8)"> !! New
-                                            Easy Address
-                                            Here !!</span>
-                                    </p>
-                                </div>
-
-                                <br>
-
-                                <div class=" container">
-                                    
-                                    <div class="text-center" style="font-size: 13px;">Copy the address generated and create your own
-                                        QR code here: <a href="https://qr-code-styling.com/" target="blank"> QR
-                                            GENERATOR </a>
-                                    </div>
-                                    <br>
-                                </div>
-
-
-
-
-
-
-
-                                <div class="container text-center card " style="border: 2px solid #70dbfc;">
-                                    <div class="card-body justify-content-center"
-                                        style="font-size: 12px; color:rgb(5,119,24);">
-                                        Your address <span style="font-size: 12px; color:rgb(172,172,221); "
-                                            id="wallet-address">
-                                        </span>
-                                    </div>
-                                </div>
-
-
-
-
-                            </div>
+                    <div class="column">
+                        <div><a class="button_link" href="#claimbuttonanchor" type="submit">PUBLIC CLAIMER</a>
+                            <a class="button_link" href="#factorymanager" type="submit">CONTRACT</a>
+                            <a class="button_link" id="oldfactory" type="submit">v0.1</a>
                         </div>
+                        <br>
+                        <div class="container">
+                            <div class="brand-logo"></div>
+                            <div class="brand-title">EASYSWAP - FACTORY</div>
+                            <h4 style="color:black">Create & Earn</h4>
+
+
+                            <div class="inputs">
+                                <label>Promoter Adress</label>
+                                <input id="promoteraddress" type="text" autocomplete="off" placeholder="0x000" />
+                                <label>Token To Promote</label>
+
+
+                                <input class="icon-rtl" list="tokens" name="listtokens" autocomplete="off"
+                                    id="addressToCreate" type="text" placeholder="0x000" />
+
+                                <datalist id="tokens" translate="no">
+                                    <option value="0x0fa9651a0ecc19906843c13c60443300b9d37355">XMINE (XMINE)</option>
+                                    <option value="0xb30b27adb3b0a45e88385eb2bb144fad9120a420">X-HASH (XSH)</option>
+                                    <option value="0xb3670f91e86a96eeda0c75b1573035a6277226fb">BUYBACK (BBT)</option>
+                                    <option value="0x086cc8e468b3cb5494f18a7abc2de1321306af12">EVOCARDANO (EVOC)
+                                    </option>
+                                    <option value="0x8800e9902879ac7fb9823086d1749030c9a5eb91">BASKETBALLLEGENDS (BBL)
+                                    </option>
+                                    <option value="0x0Ae2c8280ccc6A765991EECC87F8d569B5d53e52">STAKHOLDERS (SH)</option>
+                                    <option value="0xc15e1c0caf5bb187e63af4800422ede717dcf4f8">SHIBA BLACK (SBK)
+                                    </option>
+                                    <option value="0xadeb78ee2ae9be50109dc8d7e187effe574e93f9">XPOINTS (XPOINTS)
+                                    </option>
+                                    <option value="0xc3d94f1180ac2f605dc2d0c6dbfc159955b10fed">X-BLOX (XBX)</option>
+                                    <option value="0xba2ae424d960c26247dd6c32edc70b295c744c43">DOGECOIN (Binance-Peg
+                                        Dogecoin)</option>
+                                    <option value="0x2170ed0880ac9a755fd29b2688956bd959f933f8">ETHEREUM (Binance-Peg
+                                        Ethereum)</option>
+                                    <option value="0xe9e7cea3dedca5984780bafc599bd69add087d56">BUSD (Binance-Peg BUSD)
+                                    </option>
+                                    <option value="0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c">BITCOIN (Binance-Peg
+                                        BTCB)</option>
+                                    <option value="0x4338665cbb7b2485a8855a139b75d5e34ab0db94">LITECOIN (Binance-Peg
+                                        Litecoin)</option>
+                                    <option value="0x3ee2200efb3400fabb9aacf31297cbdd1d435d47">CARDANO (Binance-Peg
+                                        Cardano)</option>
+                                    <option value="0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe">XRP (Binance-Peg XRP)
+                                    </option>
+                                    <option value="0x1ce0c2827e2ef14d5c4f29a091d735a204794041">AVAX (Binance-Peg
+                                        Avalanche)</option>
+                                    <option value="0xf8a0bf9cf54bb92f17374d9e9a321e6a111a51bd">CHAINLINK (Binance-Peg
+                                        ChainLink)</option>
+                                    <option value="0xcc42724c6683b7e57334c4e856f4c9965ed682bd">MATIC (Matic Token)
+                                    </option>
+                                    <option value="0x2859e4544c4bb03966803b044a93563bd2d0dd4d">SHIBA INU (Binance-Peg
+                                        SHIBA INU)</option>
+                                    <option value="0xad29abb318791d579433d831ed122afeaf29dcfe">FANTOM (FTM)</option>
+                                    <option value="0x03ff0ff224f904be3118461335064bb48df47938">HARMONY (ONE)</option>
+                                    <option value="0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82">CAKE (PANCAKESWAP TOKEN)
+                                    </option>
+                                    <option value="0x2c49fE11F8F0dcc2729c1Fe11d69657D4a5201C6">ICOTI (ICOTI)</option>
+                                    <option value=""> ()</option>
+                                    <option value=""> ()</option>
+                                    <option value=""> ()</option>
+                                    <option value=""> ()</option>
+                                    <option value=""> ()</option>
+                                    <option value=""> ()</option>
+                                    <option value=""> ()</option>
+                                </datalist>
+
+                                <button type="button" id="xx" onclick="init()">RESET VALUES</button>
+                                <button id="CreateButton" type="submit">CREATE EASY ADDRESS</button>
+                            </div>
+
+
+                            <br><br>
+                            <p className="text-center">
+                                <span style="color:black; font-size: x-large; " id="neweasy-address">!! New Easy Address Here !!</span>
+                            </p>
+                            <br>
+                            <div className=" container">
+                                <div style="color:black" className="text-center">
+                                    Copy the address generated and create your own QR code here:
+                                </div>
+                            </div>
+                            <a style="color:blueviolet; font-size: larger; font-;" href="https://qr-code-styling.com/" target="blank">
+                                QR GENERATOR
+                            </a>
+                            <br>
+                            <br>
+
+
+
+
+
+                            <br><br>
+
+                            <div class="youraddress" style="font-size: 12px; color: rgb(5, 119, 24);">
+                                Your address:
+                                <span
+                                    style="font-size: 12px; color: rgb(7, 7, 204); font-family: Arial, Helvetica, sans-serif;"
+                                    id="wallet-address"></span>
+                            </div>
+
+
+
+
+                        </div>
+
+                        </button>
 
 
                     </div>
                 </div>
 
-                <div class="container text-center">
-                    Only available for Binance Smart Chain <br> Easy Factory Beta version
+               
+
+                
+
+                <br><br><br>
+                <div class="row justify-content-center" id="claimbuttonanchor">
+                    <div class="column">
+                        <br>
+                        <div  class="container" >
+
+                            <div class="brand-logo"></div>
+                            <div class="brand-title">PUBLIC CLAIMER</div>
+                            <h5 style="color:black">Claim and Earn 5% off Contract Balance</h5>
+                            <button id="ClaimButton" type="submit">CLAIM</button><br>
+                            <h3 style="color:rgb(160, 31, 31)"  id="blink">To Push Claim Button and Earn!<br>
+                                Required in wallet balance:</h3>
+
+                            <br>
+                            <a style="color:rgb(7, 27, 201);  font-size: larger; font-style: italic;"
+                                href="https://pancakeswap.finance/swap?outputCurrency=0xb3670f91e86a96eeda0c75b1573035a6277226fb">(
+                                1 MILLION - BBT)</h5> </a>
+
+                            <a style="color:rgb(7, 27, 201);  font-size: larger; font-style: italic;"
+                                href="https://pancakeswap.finance/swap?outputCurrency=0xadeb78ee2ae9be50109dc8d7e187effe574e93f9">(
+                                2 - XPOINTS TOKEN ) </h5></a>
+                            <br>
+
+
+                            
+                        </div>
+
+                        
+
+                    </div>
+
+                    
+                    
                 </div>
 
-              <!-- (MORALIS SERVER DISABLED) 
-                
-                <div id="btn-login"></div>
 
-                
-                <br>
+                <br><br><br>
+                <div class="row justify-content-center " id="claimbuttonanchor">
+                    <div class="column">
+                        <br>
+                        <div  class="containercalls">
+                <div class="brand-title">FACTORY CALLS</div><br>
+                <h3 style="color: black; ">Public Tool </h3> <br>
+                <div>
+
+                    <button class="calls" id="call_BalanceGood">Check - Balance Good </button>
+
+                    <button class="calls" id="call_CheckRequired_AnotherTokenInstance">Required in Wallet 1
+                        </button>
+
+                    <button class="calls" id="call_CheckRequired_TokenInstance">Required in Wallet 2
+                        </button>
+
+                    <button class="calls" id="call_defaultContract">Token To Burn 1</button>
+
+                    <button class="calls" id="call_defaultContract2">Token To Burn 2</button>
+
+                    <button class="calls" id="call_Creation_Fee">EasySwap Creation Fee</button>
+
+                    <button class="calls" id="call_getcount">EasySwap's Created Counter</button><br>
+
+                </div>
+                </div>
+                </div>
+                </div>
 
 
-                <div class="row d-flex justify-content-center">
-                    <button id="btn-refresh" class="w-40 btn btn-lg btn-primary"
-                        style="border-radius: 25px; font-size: 16px;" type="submit">Refresh</button><br><br>
 
-                    <button id="btn-logout" class="w-40 btn btn-lg btn-secondary"
-                        style="border-radius: 25px; font-size: 16px;" type="submit">Logout</button><br><br>
-                </div>-->
+                <br><br><br>
+                <div class="row justify-content-center " id="factorymanager">
+                    <div class="columncalls">
+                        <br>
+                        <div class="containercalls">
+                            <div class="brand-logo"></div><br>
+                            <div class="brand-title">FACTORY MANAGER</div><br>
+                           <h4 style="color:black"> DEVS ONLY </h4><br>
+                            <a class="hlinks" target="blank"
+                                href="https://bscscan.com/token/0xadeb78ee2ae9be50109dc8d7e187effe574e93f9">smartcontract
+                                bsc</a>
+                            <br><br>
+
+
+                            <div class="inputs">
+                                <label>set. Address Token 1</label>
+                                <input autocomplete="off" id="set_TokenInstance" type="text"
+                                    placeholder="tokenaddress_address" />
+                                <button id="_set_TokenInstance" type="submit">Transact</button>
+
+                                <br><br>
+
+
+                                <label>set. Required Token 1 Amount</label>
+                                <input autocomplete="off" id="set_Hold_TokenInstance" type="text"
+                                    placeholder="Minimum_uint256" />
+                                <button id="_set_Hold_TokenInstance" type="submit">Transact</button><br><br>
+
+                                <label>set. Address Token 2</label>
+                                <input autocomplete="off" id="set_AnotherTokenInstance" type="text"
+                                    placeholder="tokenaddress_address" />
+                                <button id="_set_AnotherTokenInstance" type="submit">Transact</button><br><br>
+
+                                <label>set. Required Token 2 Amount</label>
+                                <input autocomplete="off" id="set_Hold_AnotherTokenInstance" type="text"
+                                    placeholder="Minimum_uint256" />
+                                <button id="_set_Hold_AnotherTokenInstance" type="submit">Transact</button><br><br>
+
+                                <label>Add Factory Minter</label>
+                                <input id="addMinter" type="text" autocomplete="off" placeholder="address" />
+                                <button id="_addMinter" type="submit">Transact</button><br><br>
+
+                                <label>Approve</label>
+                                <input autocomplete="off" id="approvespender" type="text" placeholder="spender" />
+                                <input autocomplete="off" id="approveamount" type="text" placeholder="amount_uint256" />
+                                <button id="_approve" type="submit">Transact</button><br><br>
+
+                                <label>Create EasySwap</label>
+                                <input autocomplete="off" id="createSwaptoken" type="text"
+                                    placeholder="Token _address" />
+                                <input autocomplete="off" id="createSwappromoter" type="text"
+                                    placeholder="Promoter_address" />
+                                <button id="_createSwap" type="submit">Transact</button><br><br>
+
+                                <label>Decrease Allowance</label>
+                                <input autocomplete="off" id="decreaseAllowance" type="text"
+                                    placeholder="spender_address" />
+                                <input autocomplete="off" id="decreaseAllowance_value" type="text"
+                                    placeholder="subtractedValue_uint256" />
+                                <button id="_decreaseAllowance" type="submit">Transact</button><br><br>
+
+                                <label>Increase Allowance</label>
+                                <input autocomplete="off" id="increaseAllowance" type="text"
+                                    placeholder="spender_address" />
+                                <input autocomplete="off" id="increaseAllowance_value" type="text"
+                                    placeholder="addedValue_uint256" />
+                                <button id="_increaseAllowance" type="submit">Transact</button><br><br>
 
 
 
+                                <label>set. Burn Token 1</label>
+                                <input autocomplete="off" id="set_burnToken1" type="text"
+                                    placeholder="_Token1_address" />
+                                <button id="_set_burnToken1" type="submit">Transact</button><br><br>
+
+                                <label>set. Burn Token 2</label>
+                                <input autocomplete="off" id="set_burnToken2" type="text"
+                                    placeholder="_Token2_address" />
+                                <button id="_set_burnToken2" type="submit">Transact</button><br><br>
+
+                                <label>set. Fnderwallet</label>
+                                <input autocomplete="off" id="set_Fnderwallet" type="text" placeholder="_address" />
+                                <button id="_set_Fnderwallet" type="submit">Transact</button><br><br>
+
+                                <label>set. Creation_Fee</label>
+                                <input autocomplete="off" id="setCreation_Fee" type="text" placeholder="cost_uint256" />
+                                <button id="_setCreation_Fee" type="submit">Transact</button><br><br>
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
             </section>
-
-
-
 
         </div>
 
-        <script async src="platform.twitter.com/widgets.js" charset="utf-8"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'UA-65076627-9');
-        </script>
+
+
+
 
 
     </div>
@@ -479,6 +650,9 @@
     <script src="cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="/buybacktoken.net/assets/js/app4bf4.js?ver=1.0.3"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65076627-9"></script>
+    <script async src="platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -486,7 +660,33 @@
         gtag('config', 'UA-65076627-9');
     </script>
 
-    <script src="factory.js"></script>
+<script>
+    function init() {
+
+        $('input[name=listtokens]').focusin(function () {
+            $('input[name=listtokens]').val('');
+        });
+        $('#xx').click(function () {
+            $('input[name=listtokens]').val('');
+
+        });
+
+    }
+
+    $(document).ready(init);
+
+
+</script>
+
+<script type="text/javascript">
+    var blink = document.getElementById('blink');
+    setInterval(function() {
+      blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+    }, 700);
+  </script>
+
+    <script src="/js_web3/easyswapfactory.js" type="text/javascript"></script>
+    <!--<script src="factory.js"></script>-->
 
 </body>
 

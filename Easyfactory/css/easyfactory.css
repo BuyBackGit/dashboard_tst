@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+
+body {
+  position: relative;
+  width: 100%;
+  height:max-content;
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  place-items: center;
+  overflow: auto;
+  font-family: poppins;
+  
+}
+
+.blink {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: popins;
+  color: #27b304;
+  transition: 0.4s;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height:max-content;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;   
+  border: 1px solid rgb(7, 0, 0);
+  background: #cad9e6;
+  box-shadow: 5px 5px 50px #6a3099, -14px -14px 50px rgb(66, 71, 146);
+  
+} 
+
+.containercalls {
+  position: relative;
+  width: 100%;
+  height:max-content;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;   
+  border: 1px solid rgb(7, 0, 0);
+  background: #cad9e6;
+  box-shadow: 5px 5px 50px #6a3099, -14px -14px 50px rgb(66, 71, 146);
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.columncalls {
+  display: relative;
+  width:100%;
+  height:max-content;  
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+}
+
+.brand-logo {
+  height: 105px;
+  width: 105px;
+  background: url("/buybacktoken.net/images/bbt.png"); 
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: auto;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 1px solid rgb(7, 0, 0);
+
+  box-shadow: 5px 5px 20px #5e1391, -7px -7px 20px rgb(8, 42, 92);
+}
+
+.brand-title {
+  padding-top: 8px;
+  margin-top: 10px;
+  font-weight: 950;
+  font-size: 1.1rem;
+  text-align: center;
+  color: hsl(236, 93%, 41%);
+  letter-spacing: 1px;
+}
+
+.inputs {
+  text-align: left;
+  margin-top: 30px;
+  color:black;
+}
+
+label, input, button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+label {
+  margin-bottom: 4px;
+}
+
+label:nth-of-type(2) {
+  margin-top: 12px;
+}
+
+input::placeholder {
+  color: rgb(63, 61, 61);
+}
+
+input {
+  background: #dee4eb;
+  padding: 10px;
+  padding-left: 20px;
+  height: 50px;
+  font-size: 14px;
+  border-radius: 50px;
+  box-shadow: inset 1px 1px 1px #97b7d8, inset -1px -1px 1px rgb(228, 154, 238);
+}
+
+button {
+  margin-top: 20px;
+  background: rgb(127, 156, 250);
+  height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  box-shadow: 1px 5px 2px #165594, -2px -1px 2px rgb(172, 145, 190);
+  transition: 0.5s;
+}
+
+button:hover {
+  box-shadow: none;
+}
+
+.button_link {
+    margin-top: 20px;
+    background: rgb(177, 195, 253);
+    height: 20px;
+    width: 150px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 1px 5px 2px #165594, -2px -1px 2px rgb(172, 145, 190);
+    transition: 0.6s;
+  }
+  
+  .button_link:hover {
+    box-shadow: none;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+a {
+  position: center;
+  font-size: 12px;
+  color: black;
+  
+
+}
+
+
+
+.buttonclaim {
+  position: center;
+  max-width: 1px;
+  align-items: center;
+
+}
+
+.hlinks {
+  background-color: black;
+  color: white;
+  font-size: small;
+
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+}
+
+
+.youraddress {
+  margin: 10px;
+
+}
