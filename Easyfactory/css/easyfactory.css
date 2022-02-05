@@ -99,6 +99,7 @@ label, input, button {
   border: none;
   outline: none;
   box-sizing: border-box;
+  color:black;
 }
 
 label {
@@ -194,4 +195,27 @@ a {
 .youraddress {
   margin: 10px;
 
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  width: 55px;
+  height: 55px; 
+  right: 10px;
+  
+  margin-left: 50%;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  background-color: rgb(98, 83, 102);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 100px;
+}
+
+#myBtn:hover {
+  background-color: rgb(112, 21, 148);
 }
