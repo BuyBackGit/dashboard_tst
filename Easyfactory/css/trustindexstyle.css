@@ -274,3 +274,8 @@ h5  {  .
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: #079c20;}
 
+#cont-new li {
+  display:none;
+  font-size:25px;
+  padding-bottom:20px;
+}

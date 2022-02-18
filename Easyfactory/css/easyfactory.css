@@ -52,6 +52,28 @@ body {
   padding-right: 10%;
 }
 
+.box {
+  float: right;
+  height: 20px;
+  width: 20px;
+  padding: 1px;
+  margin: 1px;
+  margin-top: 0px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+ 
+  
+}
+
+.red {
+  background-color: rgb(102,214,130);
+}
+
+.purple{
+  background-color: rgb(194,139,238);
+}
+
 .columncalls {
   display: relative;
   width:100%;
