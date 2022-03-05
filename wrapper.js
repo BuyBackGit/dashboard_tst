@@ -33,7 +33,7 @@ getaprovebbt = async () => {
 }
 
 getswaptowbbt = async () => {
-  var number = parseInt(document.getElementById("swaptowbbtvalue").value); // **SETUP A ENVIROMENT WHERE USER CHOOSE THE NFT TO STAKE	
+  var number = parseInt(document.getElementById("swaptowbbtvalue").value); 
 
   let amount1 = web3.utils.toBN(number);
   let amount2 = web3.utils.toWei(amount1, 'ether'); //READABLE NR = amount2
