@@ -612,7 +612,7 @@ get_sellbbt = async () => {
 		return alert('Contract Balance only capable to buy: \n\n ' + maxtsell + ' BBT \n\n Reduce the amount off tokens to sell!')
 		
 	} else {
-		alert(' You Will Receive ' + z + ' BNB, Confirm Transaction to Sell Tokens');
+		alert(' You Will Receive \n\n' + z + ' BNB \n\n Confirm Transaction to Sell Tokens \n\n Require Click 1 Time "Approve to Sell"');
 		const receipt = await contractInstance.methods.SELL_Tokens(number).send({from: account});
 		console.log(receipt.events);
 		const amountsold = await receipt.events.Sold.returnValues['amount'];
