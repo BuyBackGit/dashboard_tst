@@ -106,7 +106,7 @@
                             <br>          
                             
                             
-                            <p id ="lottonumber">LOTTO NUMBER #</p>
+                            <h4  id ="lottonumber">LOTTO NUMBER #</h4>
                             <p id ="activeplayers">CURRENT PLAYERS</p>
                             <p id ="maxplayers">MAX PLAYERS PER LOTTO</p>
                             <p id ="ticketcost">TICKET PRICE</p>
@@ -410,7 +410,7 @@
     const z = new web3.eth.Contract(abicreateaddress,"0xf9eed593725455BE8681808463810318d6737F7b")
     .methods.cost().call().then(z =>{ 
         var a = z/1e18;
-        document.getElementById("ticketcost").textContent = "TICKET PRICE =  " + a + " BNB" ;        
+        document.getElementById("ticketcost").textContent = "PLAY COST =  " + a + " BNB" ;        
         console.log("TICKET PRICE = " + a);
     });
    
