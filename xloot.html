@@ -208,8 +208,10 @@
     web3.eth.getBlockNumber()
     .then(function(blockNumber) {
         document.getElementById("blockNumber").textContent = "Block Number: " + blockNumber;
-        console.log(blockNumber + ' BSC BLOCK');               
+        console.log(blockNumber + ' BSC BLOCK');   
+    //    setInterval('autoRefresh()', 5000);            
     });
+
 
     const abicreateaddress = [
 	{
@@ -379,26 +381,42 @@
 	}
 ];
 
+setInterval(function(){ 
+    web3.eth.getBlockNumber()
+    .then(function(blockNumber) {
+        document.getElementById("blockNumber").textContent = "Block Number: " + blockNumber;
+        console.log(blockNumber + ' BSC BLOCK');   
+      ///  setInterval('autoRefresh()', 5000);            
+    });
+}, 10000);
 
+const x = new web3.eth.Contract(abicreateaddress,"0xf9eed593725455BE8681808463810318d6737F7b")
+    .methods.lotto_counter().call().then(x =>{ 
+        document.getElementById("lottonumber").textContent = "LOTTO # " + x ;
+    }); 
 
-
+setInterval(function(){
     const x = new web3.eth.Contract(abicreateaddress,"0xf9eed593725455BE8681808463810318d6737F7b")
     .methods.lotto_counter().call().then(x =>{ 
         document.getElementById("lottonumber").textContent = "LOTTO # " + x ;
     }); 
- 
+}, 10000);
 
 
 
+const y = new web3.eth.Contract(abicreateaddress,"0xf9eed593725455BE8681808463810318d6737F7b")
+    .methods.ActivePlayers().call().then(y =>{ 
+        document.getElementById("activeplayers").textContent = "CURRENT PLAYERS =  " + y ;
+        console.log("CURRENT PLAYERS = " + y);
+    }); 
     
-    
-
+setInterval(function(){
     const y = new web3.eth.Contract(abicreateaddress,"0xf9eed593725455BE8681808463810318d6737F7b")
     .methods.ActivePlayers().call().then(y =>{ 
         document.getElementById("activeplayers").textContent = "CURRENT PLAYERS =  " + y ;
         console.log("CURRENT PLAYERS = " + y);
     }); 
-
+}, 10000);
     const yz = new web3.eth.Contract(abicreateaddress,"0xf9eed593725455BE8681808463810318d6737F7b")
     .methods.maxplayers_perLotto().call().then(yz =>{ 
         document.getElementById("maxplayers").textContent = "MAX PLAYERS =  " + yz ;
@@ -418,7 +436,6 @@
     //var y = await x;
     //Creation_Fee = y/1e18;
     
-
     web3.eth.getBalance("0xf9eed593725455BE8681808463810318d6737F7b")
     .then(function(getBalance) {
         var b = getBalance/1e18;
@@ -427,6 +444,15 @@
         
     });
 
+setInterval(function(){
+    web3.eth.getBalance("0xf9eed593725455BE8681808463810318d6737F7b")
+    .then(function(getBalance) {
+        var b = getBalance/1e18;
+        document.getElementById("bnbpot").textContent = "BALANCE: " + b + " BNB";
+        console.log("BALANCE " + b + ' BNB');
+        
+    });
+}, 10000);
     
 </script>
 
