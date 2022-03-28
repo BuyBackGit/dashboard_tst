@@ -724,3 +724,7 @@ if (document.querySelector('#call_activatesells') != null) {
 }
 
 
+
+//class="buypricecall"
+//id="buypricecall1"
+
