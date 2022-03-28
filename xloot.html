@@ -110,7 +110,7 @@
                             <p id ="activeplayers">CURRENT PLAYERS</p>
                             <p id ="maxplayers">MAX PLAYERS PER LOTTO</p>
                             <p id ="ticketcost">TICKET PRICE</p>
-                            <p id ="bnbpot">POT VALUE</p>
+                            <p id ="bnbpot">BALANCE</p>
                             <br>
                             <br>
                             <br>
@@ -422,8 +422,8 @@
     web3.eth.getBalance("0xf9eed593725455BE8681808463810318d6737F7b")
     .then(function(getBalance) {
         var b = getBalance/1e18;
-        document.getElementById("bnbpot").textContent = "POT VALUE: " + b + " BNB";
-        console.log("POT VALUE " + b + ' BNB');
+        document.getElementById("bnbpot").textContent = "BALANCE: " + b + " BNB";
+        console.log("BALANCE " + b + ' BNB');
         
     });
 
