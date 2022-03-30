@@ -773,31 +773,31 @@ getbbtlogo = async () => {
     const tokenSymbol = 'BBT Token';
     const tokenDecimals = 18;
     const tokenImage = 'https://ipfs.io/ipfs/QmbpBoNGRkka1jWtKjvupi2E5FGUbXVj2uVhxJrcPsYvVK';
-  
+
     try {
-      // wasAdded is a boolean. Like any RPC method, an error may be thrown.
-      const wasAdded = await ethereum.request({
-        method: 'wallet_watchAsset',
-        params: {
-          type: 'ERC20', // Initially only supports ERC20, but eventually more!
-          options: {
-            address: tokenAddress, // The address that the token is at.
-            symbol: tokenSymbol, // A ticker symbol or shorthand, up to 5 chars.
-            decimals: tokenDecimals, // The number of decimals in the token
-            image: tokenImage, // A string url of the token logo
-          },
-        },
-      });
-  
-      if (wasAdded) {
-        console.log('Thanks for your interest!');
-      } else {
-        console.log('Your loss!');
-      }
+        // wasAdded is a boolean. Like any RPC method, an error may be thrown.
+        const wasAdded = await ethereum.request({
+            method: 'wallet_watchAsset',
+            params: {
+                type: 'ERC20', // Initially only supports ERC20, but eventually more!
+                options: {
+                    address: tokenAddress, // The address that the token is at.
+                    symbol: tokenSymbol, // A ticker symbol or shorthand, up to 5 chars.
+                    decimals: tokenDecimals, // The number of decimals in the token
+                    image: tokenImage, // A string url of the token logo
+                },
+            },
+        });
+
+        if (wasAdded) {
+            console.log('Thanks for your interest!');
+        } else {
+            console.log('Your loss!');
+        }
     } catch (error) {
-      console.log(error);
+        console.log(error);
     }
-  }
+}
 
 
 //------------------------------------------------------------------------------
@@ -808,31 +808,31 @@ getxpointslogo = async () => {
     const tokenSymbol = 'xpoints';
     const tokenDecimals = 18;
     const tokenImage = '';
-  
+
     try {
-      // wasAdded is a boolean. Like any RPC method, an error may be thrown.
-      const wasAdded = await ethereum.request({
-        method: 'wallet_watchAsset',
-        params: {
-          type: 'ERC20', // Initially only supports ERC20, but eventually more!
-          options: {
-            address: tokenAddress, // The address that the token is at.
-            symbol: tokenSymbol, // A ticker symbol or shorthand, up to 5 chars.
-            decimals: tokenDecimals, // The number of decimals in the token
-            image: tokenImage, // A string url of the token logo
-          },
-        },
-      });
-  
-      if (wasAdded) {
-        console.log('Thanks for your interest!');
-      } else {
-        console.log('Your loss!');
-      }
+        // wasAdded is a boolean. Like any RPC method, an error may be thrown.
+        const wasAdded = await ethereum.request({
+            method: 'wallet_watchAsset',
+            params: {
+                type: 'ERC20', // Initially only supports ERC20, but eventually more!
+                options: {
+                    address: tokenAddress, // The address that the token is at.
+                    symbol: tokenSymbol, // A ticker symbol or shorthand, up to 5 chars.
+                    decimals: tokenDecimals, // The number of decimals in the token
+                    image: tokenImage, // A string url of the token logo
+                },
+            },
+        });
+
+        if (wasAdded) {
+            console.log('Thanks for your interest!');
+        } else {
+            console.log('Your loss!');
+        }
     } catch (error) {
-      console.log(error);
+        console.log(error);
     }
-  }
+}
 
 
 //------------------------------------------------------------------------------
@@ -1111,7 +1111,7 @@ const xcost = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f4
         console.log("TICKET PRICE = " + xa);
     });
 
-   
+
 
 const maxx = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
     .methods.X_maxplayers_perlotto().call().then(maxx => {
@@ -1128,3 +1128,13 @@ const xbal = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43
         console.log("BALANCE " + rxvalue + ' Xpoints');
 
     });
+
+setInterval(function () {
+    const xbal = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
+        .methods.get_XPOINTS_Balance().call().then(xbal => {
+            var rxvalue = xbal / 1e18;
+            document.getElementById("xpot").textContent = "BALANCE: " + bbbt + " Xpoints";
+            console.log("BALANCE " + rxvalue + ' Xpoints');
+
+        });
+}, 10000);
