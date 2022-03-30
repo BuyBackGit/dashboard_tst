@@ -94,7 +94,7 @@ ul {
     transform: scale(2.2);
 }
 
-.container .gallery .image img{
+.container .gallery .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;

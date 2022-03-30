@@ -36,7 +36,25 @@ body {
   background: #cad9e6;
   box-shadow: 5px 5px 50px #6a3099, -14px -14px 50px rgb(66, 71, 146);
   
-} 
+}
+
+.container1 {
+  position: relative;
+  width: 100%;
+  height:max-content;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;   
+  border: 1px solid rgb(85, 2, 133);
+  background: #cad9e6;
+  box-shadow: 2px 2px 20px #3e00b1, -14px -14px 9px rgb(66, 71, 146);
+    
+
+}
 
 .containercalls {
   position: relative;
@@ -64,6 +82,11 @@ body {
   border: 1px solid black;
  
   
+}
+
+h4{
+  color:rgb(0, 0, 185); 
+  font-family:'Brush Script MT', cursive;"
 }
 
 .red {
@@ -122,6 +145,7 @@ label, input, button {
   color:black;
 }
 
+
 label {
   margin-bottom: 4px;
 }
@@ -157,6 +181,10 @@ button {
 
 button:hover {
   box-shadow: none;
+}
+
+p{
+  color:black;
 }
 
 .button_link {
