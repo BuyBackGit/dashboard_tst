@@ -994,7 +994,14 @@ const z = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6f
 web3node.eth.getBalance("0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
     .then(function (getBalance) {
         var b = getBalance / 1e18;
-        document.getElementById("bnbpot").textContent = "BALANCE: " + b + " BNB";
+
+        var bstring = b.toString();
+        console.log("BNB String Pot " + bstring);
+
+        var int = parseFloat(bstring).toFixed(4);
+        console.log("NUMBER " + int);           
+
+        document.getElementById("bnbpot").textContent = "POT: " + int + " bnb";
         console.log("BALANCE " + b + ' BNB');
 
     });
@@ -1003,7 +1010,12 @@ setInterval(function () {
     web3node.eth.getBalance("0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
         .then(function (getBalance) {
             var b = getBalance / 1e18;
-            document.getElementById("bnbpot").textContent = "BALANCE: " + b + " BNB";
+            var bstring = b.toString();
+            console.log("BNB String Pot " + bstring);
+    
+            var int = parseFloat(bstring).toFixed(4);
+            console.log("NUMBER " + int);
+            document.getElementById("bnbpot").textContent = "POT: " + int + " bnb";
             console.log("BALANCE " + b + ' BNB');
 
         });
@@ -1054,12 +1066,32 @@ const zbbtcost = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E52873
         console.log("TICKET PRICE = " + a);
     });
 
+setInterval(function () {
+    const zbbtcost = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
+        .methods.BBTCost().call().then(zbbtcost => {
+            var a = web3.utils.fromWei(zbbtcost, 'ether');
+
+            document.getElementById("ticketcostbbt").textContent = "PLAY COST =  " + a + " BBT";
+            console.log("TICKET PRICE = " + a);
+        });
+}, 10000);
 
 const bbtbal = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
     .methods.get_BBT_Balance().call().then(bbtbal => {
         var bbbt = bbtbal / 1e18;
-        document.getElementById("bbtpot").textContent = "BALANCE: " + bbbt + " BBT";
+
+        var stt = bbbt.toString();
+        console.log("BBT String Pot " + stt);
+
+        var number = stt;
+        var nodecimals = number | 0;
+
+        console.log(nodecimals);
+
+        document.getElementById("bbtpot").textContent = "POT: " + nodecimals + " bbt";
         console.log("BALANCE " + bbbt + ' BBT');
+
+        //console.log(bbtbal.toString());
 
     });
 
@@ -1067,7 +1099,16 @@ setInterval(function () {
     const bbtbal = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
         .methods.get_BBT_Balance().call().then(bbtbal => {
             var bbbt = bbtbal / 1e18;
-            document.getElementById("bbtpot").textContent = "BALANCE: " + bbbt + " BBT";
+
+            var stt = bbbt.toString();
+            console.log("BBT String Pot " + stt);
+
+            var number = stt;
+            var nodecimals = number | 0;
+
+            console.log(nodecimals);
+
+            document.getElementById("bbtpot").textContent = "POT: " + nodecimals + " bbt";
             console.log("BALANCE " + bbbt + ' BBT');
 
         });
@@ -1111,6 +1152,15 @@ const xcost = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f4
         console.log("TICKET PRICE = " + xa);
     });
 
+setInterval(function () {
+    const xcost = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
+        .methods.XCost().call().then(xcost => {
+            var xa = web3.utils.fromWei(xcost, 'ether');
+
+            document.getElementById("ticketcostx").textContent = "PLAY COST =  " + xa + " XPoints";
+            console.log("TICKET PRICE = " + xa);
+        });
+}, 10000);
 
 
 const maxx = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
@@ -1124,7 +1174,17 @@ const maxx = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43
 const xbal = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
     .methods.get_XPOINTS_Balance().call().then(xbal => {
         var rxvalue = xbal / 1e18;
-        document.getElementById("xpot").textContent = "BALANCE: " + rxvalue + " Xpoints";
+
+        var sttx = rxvalue.toString();
+        console.log("BBT String Pot " + sttx);
+
+        var numberx = sttx;
+        var nodecimalsx = numberx | 0;
+
+        console.log(nodecimalsx);
+
+
+        document.getElementById("xpot").innerHTML = "POT: " + nodecimalsx + " xpoints";
         console.log("BALANCE " + rxvalue + ' Xpoints');
 
     });
@@ -1133,7 +1193,16 @@ setInterval(function () {
     const xbal = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
         .methods.get_XPOINTS_Balance().call().then(xbal => {
             var rxvalue = xbal / 1e18;
-            document.getElementById("xpot").textContent = "BALANCE: " + bbbt + " Xpoints";
+
+            var sttx = rxvalue.toString();
+            console.log("BBT String Pot " + sttx);
+    
+            var numberx = sttx;
+            var nodecimalsx = numberx | 0;
+    
+            console.log(nodecimalsx);
+
+            document.getElementById("xpot").innerHTML = "POT: " + nodecimalsx + " xpoints";
             console.log("BALANCE " + rxvalue + ' Xpoints');
 
         });
