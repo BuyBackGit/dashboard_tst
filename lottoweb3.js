@@ -963,21 +963,21 @@ setInterval(function () {
 
 const y = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
     .methods.BNB_ActivePlayers().call().then(y => {
-        document.getElementById("activeplayers").textContent = "CURRENT PLAYERS =  " + y;
+        document.getElementById("activeplayers").textContent = "Sold Tickets =  " + y;
         console.log("CURRENT PLAYERS = " + y);
     });
 
 setInterval(function () {
     const y = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
         .methods.BNB_ActivePlayers().call().then(y => {
-            document.getElementById("activeplayers").textContent = "CURRENT PLAYERS =  " + y;
+            document.getElementById("activeplayers").textContent = "Sold Tickets =  " + y;
             console.log("CURRENT PLAYERS = " + y);
         });
 }, 10000);
 
 const yz = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
     .methods.maxplayers_perLotto().call().then(yz => {
-        document.getElementById("maxplayers").textContent = "MAX PLAYERS =  " + yz;
+        document.getElementById("maxplayers").textContent = "Max Tickets =  " + yz;
         console.log("MAX PLAYERS = " + yz);
     });
 
@@ -986,7 +986,7 @@ const yz = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6
 const z = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
     .methods.cost().call().then(z => {
         var a = z / 1e18;
-        document.getElementById("ticketcost").textContent = "PLAY COST =  " + a + " BNB";
+        document.getElementById("ticketcost").textContent = "Price =  " + a + " BNB";
         console.log("TICKET PRICE = " + a);
     });
 
@@ -999,7 +999,7 @@ web3node.eth.getBalance("0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
         console.log("BNB String Pot " + bstring);
 
         var int = parseFloat(bstring).toFixed(4);
-        console.log("NUMBER " + int);           
+        console.log("NUMBER " + int);
 
         document.getElementById("bnbpot").textContent = "POT: " + int + " bnb";
         console.log("BALANCE " + b + ' BNB');
@@ -1012,7 +1012,7 @@ setInterval(function () {
             var b = getBalance / 1e18;
             var bstring = b.toString();
             console.log("BNB String Pot " + bstring);
-    
+
             var int = parseFloat(bstring).toFixed(4);
             console.log("NUMBER " + int);
             document.getElementById("bnbpot").textContent = "POT: " + int + " bnb";
@@ -1038,21 +1038,21 @@ setInterval(function () {
 
 const ybbt = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
     .methods.BBT_ActivePlayers().call().then(ybbt => {
-        document.getElementById("activeplayersbbt").textContent = "CURRENT PLAYERS =  " + ybbt;
+        document.getElementById("activeplayersbbt").textContent = "Sold Tickets =  " + ybbt;
         console.log("CURRENT PLAYERS = " + ybbt);
     });
 
 setInterval(function () {
     const ybbt = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
         .methods.BBT_ActivePlayers().call().then(ybbt => {
-            document.getElementById("activeplayersbbt").textContent = "CURRENT PLAYERS =  " + ybbt;
+            document.getElementById("activeplayersbbt").textContent = "Sold Tickets =  " + ybbt;
             console.log("CURRENT PLAYERS = " + ybbt);
         });
 }, 10000);
 
 const maxpbbt = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
     .methods.BBT_maxplayers_perlotto().call().then(maxpbbt => {
-        document.getElementById("maxplayersbbt").textContent = "MAX PLAYERS =  " + maxpbbt;
+        document.getElementById("maxplayersbbt").textContent = "Max Tickets =  " + maxpbbt;
         console.log("MAX PLAYERS = " + maxpbbt);
     });
 
@@ -1060,19 +1060,23 @@ const maxpbbt = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732
 
 const zbbtcost = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
     .methods.BBTCost().call().then(zbbtcost => {
-        var a = web3.utils.fromWei(zbbtcost, 'ether');
-
-        document.getElementById("ticketcostbbt").textContent = "PLAY COST =  " + a + " BBT";
-        console.log("TICKET PRICE = " + a);
+        var b = zbbtcost / 1e18;
+        var bstring = b.toString();
+        console.log("xpoints String price " + bstring);
+        var int = parseFloat(bstring).toFixed(0);
+        document.getElementById("ticketcostbbt").textContent = "Price =  " + int + " BBT";
+        
     });
 
 setInterval(function () {
     const zbbtcost = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
         .methods.BBTCost().call().then(zbbtcost => {
-            var a = web3.utils.fromWei(zbbtcost, 'ether');
-
-            document.getElementById("ticketcostbbt").textContent = "PLAY COST =  " + a + " BBT";
-            console.log("TICKET PRICE = " + a);
+            var b = zbbtcost / 1e18;
+            var bstring = b.toString();
+            console.log("xpoints String price " + bstring);
+            var int = parseFloat(bstring).toFixed(0);
+            document.getElementById("ticketcostbbt").textContent = "Price =  " + int + " BBT";
+            //console.log("TICKET PRICE = " + a);
         });
 }, 10000);
 
@@ -1132,40 +1136,49 @@ setInterval(function () {
 
 const xact = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
     .methods.XPOINTS_ActivePlayers().call().then(xact => {
-        document.getElementById("activeplayersx").textContent = "CURRENT PLAYERS =  " + xact;
+        document.getElementById("activeplayersx").textContent = "Sold Tickets =  " + xact;
         console.log("CURRENT PLAYERS = " + xact);
     });
 
 setInterval(function () {
     const xact = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
         .methods.XPOINTS_ActivePlayers().call().then(xact => {
-            document.getElementById("activeplayersx").textContent = "CURRENT PLAYERS =  " + xact;
+            document.getElementById("activeplayersx").textContent = "Sold Tickets =  " + xact;
             console.log("CURRENT PLAYERS = " + xact);
         });
 }, 10000);
 
+
 const xcost = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
     .methods.XCost().call().then(xcost => {
-        var xa = web3.utils.fromWei(xcost, 'ether');
-
-        document.getElementById("ticketcostx").textContent = "PLAY COST =  " + xa + " XPoints";
-        console.log("TICKET PRICE = " + xa);
+        //var xa1 = web3.utils.fromWei(xcost, 'ether');
+        //document.getElementById("ticketcostx").textContent = "Price =  " + xa1 + " XPoints";
+        //console.log("TICKET PRICE = " + xa1);
+        var b = xcost / 1e18;
+        var bstring = b.toString();
+        console.log("xpoints String price " + bstring);
+        var int = parseFloat(bstring).toFixed(0);
+        document.getElementById("ticketcostx").textContent = "Price: " + int + " XPoints";
+        console.log("XPOINTS TICKET PRICE " + b + ' xpoints');
     });
 
 setInterval(function () {
     const xcost = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
         .methods.XCost().call().then(xcost => {
-            var xa = web3.utils.fromWei(xcost, 'ether');
+            var b = xcost / 1e18;
+            var bstring = b.toString();
+            console.log("xpoints String price " + bstring);
+            var int = parseFloat(bstring).toFixed(0);
+            document.getElementById("ticketcostx").textContent = "Price: " + int + " XPoints";
+            
 
-            document.getElementById("ticketcostx").textContent = "PLAY COST =  " + xa + " XPoints";
-            console.log("TICKET PRICE = " + xa);
         });
 }, 10000);
 
 
 const maxx = new web3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3")
     .methods.X_maxplayers_perlotto().call().then(maxx => {
-        document.getElementById("maxplayersx").textContent = "MAX PLAYERS =  " + maxx;
+        document.getElementById("maxplayersx").textContent = "Max Tickets =  " + maxx;
         console.log("MAX PLAYERS = " + maxx);
     });
 
@@ -1196,10 +1209,10 @@ setInterval(function () {
 
             var sttx = rxvalue.toString();
             console.log("BBT String Pot " + sttx);
-    
+
             var numberx = sttx;
             var nodecimalsx = numberx | 0;
-    
+
             console.log(nodecimalsx);
 
             document.getElementById("xpot").innerHTML = "POT: " + nodecimalsx + " xpoints";
@@ -1207,3 +1220,23 @@ setInterval(function () {
 
         });
 }, 10000);
+
+
+
+//--------------------------------- ALL EVENTS SECTION ----------------------------------------
+
+//const NODE_URL2 = "https://bsc-dataseed1.binance.org";
+//const provider2 = new Web3.providers.HttpProvider(NODE_URL2);
+//const bweb3node = new Web3(provider2);
+
+
+
+//const contract = new bweb3node.eth.Contract(abicreateaddress, "0x10EdC65CB0E528732f43f6fAAB6e86b4E63dEBE3");
+
+//const BBT_lotto_events = async () => {
+//  await contract.getPastEvents('BBT_Winner',{ filter: {BBTLottoID: 1}, fromBlock: 16493301, toBlock: 'latest' }).then(console.log)}; //Limited to 5000 blocks BSC node
+
+
+
+//BBT_lotto_events();
+//console.log("end")
