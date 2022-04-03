@@ -1251,9 +1251,21 @@ async function calcBNBPrice(){
         amountOutbnbp =  web3.utils.fromWei(amountOutbnbp[1]);
     } catch (error) {}
     if(!amountOutbnbp) return 0;    
-   // console.log(amountOutbnbp);
+    //console.log(amountOutbnbp);
     const amountOutbnbstring = amountOutbnbp.toString();
-    var bnbpricedecw = parseFloat(amountOutbnbstring).toFixed(2);
+    
+    const xxx = amountOutbnbstring.split(",",2);            
+    part1x = xxx[0];
+    part2x = xxx[1];
+   // console.log(part2x);
+
+    const xfinal = web3node.utils.fromWei(part2x, 'ether');
+   // console.log("final price = " + xfinal );
+
+
+    
+
+    var bnbpricedecw = parseFloat(xfinal).toFixed(2);
     console.log("BNB PRICE = " + bnbpricedecw + " $ - BUSD")
     return bnbpricedecw;
 }
